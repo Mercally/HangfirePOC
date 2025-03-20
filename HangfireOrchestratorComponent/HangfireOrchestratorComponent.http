@@ -1,0 +1,8 @@
+@HangfireOrchestratorComponent_HostAddress = http://localhost:5205
+
+POST {{HangfireOrchestratorComponent_HostAddress}}/api/WorkFlowOne/StartSimpleWorkflow
+Accept: application/json
+
+###
+POST {{HangfireOrchestratorComponent_HostAddress}}/api/WorkFlowOne/StartComplexWorkflow
+Accept: application/json
