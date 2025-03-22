@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Full",
+    "Projects": [
+      {
+        "Path": "HangfireOrchestratorComponent\\HangfireOrchestratorComponent.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "HangfirePOC.AppHost\\HangfirePOC.AppHost.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Microservices\\WebApiOne\\WebApiOne.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

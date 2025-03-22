@@ -20,6 +20,10 @@ public class WorkFlowOneController : ControllerBase
         _dbContext = pocDbContext;
     }
 
+    /// <summary>
+    /// Simulate a simple workflow.
+    /// </summary>
+    /// <returns></returns>
     [HttpPost("StartSimpleWorkflow")]
     public IActionResult StartSimpleWorkflow()
     {
@@ -37,6 +41,10 @@ public class WorkFlowOneController : ControllerBase
         return Ok();
     }
 
+    /// <summary>
+    /// Simulate a complex workflow (with asynchronous tasks).
+    /// </summary>
+    /// <returns></returns>
     [HttpPost("StartComplexWorkflow")]
     public IActionResult StartComplexWorkflow()
     {
@@ -68,6 +76,11 @@ public class WorkFlowOneController : ControllerBase
         return Ok();
     }
 
+    /// <summary>
+    /// A simple task.
+    /// </summary>
+    /// <param name="taskName"></param>
+    /// <returns></returns>
     public Task TaskToRun(string taskName)
     {
         Debug.WriteLine("Started.", taskName);
@@ -78,6 +91,14 @@ public class WorkFlowOneController : ControllerBase
         return Task.CompletedTask;
     }
 
+    /// <summary>
+    /// A complex task.
+    /// </summary>
+    /// <param name="taskName"></param>
+    /// <param name="workflowId"></param>
+    /// <param name="nextJob"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
     public async Task TaskToEnqueue(string taskName, Guid workflowId, string nextJob)
     {
         Debug.WriteLine("Started.", taskName);
